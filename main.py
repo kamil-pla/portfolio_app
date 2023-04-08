@@ -22,14 +22,14 @@ Below you may find my initial portfolio of apps which I created while learning c
 As a first step I started from Python and learning basics of Git, HTML, CSS and SQL.
 """
 
-col1, col2, col3 = st.columns([1, 3, 6])  # set width ratios for columns
+col1, col2, col3 = st.columns([.5, 2.5, 6])  # set width ratios for columns
 
 
 with col1:
     st.write("")
 
 with col2:
-    st.image("images/photo.png", width=400)
+    st.image("images/photo.png")
 
 with col3:
     st.title(my_name)
@@ -42,8 +42,14 @@ with col4:
     df = pandas.read_csv("data.csv", sep=";")
     for i, row in df[:10].iterrows():
         st.header(row["title"])
+        st.write(row["description"])
+        st.image("images/" + row["image"])
+        st.write(f"[Source code]({row['url']})")
 
 with col5:
     df = pandas.read_csv("data.csv", sep=";")
     for i, row in df[10:].iterrows():
         st.header(row["title"])
+        st.write(row["description"])
+        st.image("images/" + row["image"])
+        st.write(f"[Source code]({row['url']})")
