@@ -1,8 +1,9 @@
 import streamlit as st
+import pandas
 
 st.set_page_config(layout="wide")
 
-my_name = 'Kamil Pierzchała'
+my_name = "Kamil Pierzchała"
 
 content1 = """
 I am beginner Python programmer. 
@@ -31,7 +32,18 @@ with col2:
     st.image("images/photo.png", width=400)
 
 with col3:
-
     st.title(my_name)
     st.write(content1)
     st.write(content2)
+
+col4, col5 = st.columns(2)
+
+with col4:
+    df = pandas.read_csv("data.csv", sep=";")
+    for i, row in df[:10].iterrows():
+        st.header(row["title"])
+
+with col5:
+    df = pandas.read_csv("data.csv", sep=";")
+    for i, row in df[10:].iterrows():
+        st.header(row["title"])
