@@ -2,6 +2,8 @@ import streamlit as st
 
 st.set_page_config(layout="wide")
 
+my_name = 'Kamil Pierzchała'
+
 content1 = """
 I am beginner Python programmer. 
 Professionally, I was born as a manufacturing engineer in automotive industry and 
@@ -29,17 +31,7 @@ with col2:
     st.image("images/photo.png", width=400)
 
 with col3:
-    st.markdown(
-        f"""
-        <div class="container d-flex justify-content-center">
-            <div class="content">
-                <h1 class="text-center">Kamil Pierzchała</h1>
-                <p>{content1}</p>
-                <p>{content2}</p>
-            </div>
-        </div>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-twekYlQ5+pbDLBJq0CTh7JGGzKGmRUE7dMM0pP8hO9uYp1CFszdG+IOb2hJtXTj" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="./style.css">
-        """
-        , unsafe_allow_html=True
-    )
+
+    st.title(my_name)
+    st.write(content1)
+    st.write(content2)
