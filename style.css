@@ -1,0 +1,24 @@
+.container {
+    margin-top: 50px;
+}
+
+.my-image {
+    display: block;
+    margin: 0 auto;
+}
+
+.content {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.col-1 {
+    width: 40%;
+}
+
+.col-2 {
+    width: 60%;
+}
